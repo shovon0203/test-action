@@ -1,18 +1,10 @@
 name: 'My Docker Action'
-description: 'A GitHub Action using Docker'
+description: 'A GitHub Action using Docker that reads a secret'
 author: 'T'
-inputs:
-  my-input:
-    description: 'An input parameter'
-    required: true
-    default: 'default value'
-outputs:
-  my-output:
-    description: 'An output parameter'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-env:
-  PASS: ${{ secrets.PASS }}
+  env:
+    PASS: ${{ secrets.PASS }}
 
 
