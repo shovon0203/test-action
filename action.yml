@@ -1,0 +1,16 @@
+name: 'Docker Test Action'
+description: 'GitHub Action using Docker'
+author: 'T'
+inputs:
+  my-input:
+    description: 'An input parameter'
+    required: true
+    default: 'default value'
+outputs:
+  my-output:
+    description: 'An output parameter'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.my-input }}
