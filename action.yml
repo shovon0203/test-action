@@ -12,10 +12,7 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.my-input }}
 env:
-  MY_INPUT: ${{ inputs.my-input }}
   PASS: ${{ secrets.PASS }}
 
 
