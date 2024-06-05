@@ -1,5 +1,5 @@
-name: 'Docker Test Action'
-description: 'GitHub Action using Docker'
+name: 'My Docker Action'
+description: 'A GitHub Action using Docker'
 author: 'T'
 inputs:
   my-input:
@@ -14,3 +14,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.my-input }}
+env:
+  MY_INPUT: ${{ inputs.my-input }}
+  PASS: ${{ secrets.PASS }}
+
