@@ -4,7 +4,3 @@ author: 'T'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    PASS: ${{ secrets.PASS }}
-
-
