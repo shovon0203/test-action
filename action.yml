@@ -1,6 +1,7 @@
 name: 'My Docker Action'
 description: 'A GitHub Action using Docker that reads a secret'
 author: 'T'
+
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node12'
+  main: 'index.js'
